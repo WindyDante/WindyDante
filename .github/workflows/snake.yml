@@ -31,9 +31,12 @@ jobs:
         uses: Platane/snk@v2
         with:
           github_user_name: chrisbanas
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      # Ensure output directory exists and move files
+      - name: Move generated files to dist
+        run: |
+          mkdir -p dist
+          mv github-contribution-grid-snake.svg dist/github-contribution-grid-snake.svg
+          mv github-contribution-grid-snake-dark.svg dist/github-contribution-grid-snake-dark.svg
 
       # Push the generated SVG files to the output branch
       - name: Push github-contribution-grid-snake.svg to the output branch
