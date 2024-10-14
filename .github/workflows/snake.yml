@@ -8,7 +8,7 @@ on:
   # Allows to manually run the job at any time
   workflow_dispatch:
 
-  # Run on every push on the master branch
+  # Run on every push on the main branch
   push:
     branches:
       - master
@@ -30,13 +30,10 @@ jobs:
       - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk@v2
         with:
-          github_user_name: chrisbanas
-      # Ensure output directory exists and move files
-      - name: Move generated files to dist
-        run: |
-          mkdir -p dist
-          mv github-contribution-grid-snake.svg dist/github-contribution-grid-snake.svg
-          mv github-contribution-grid-snake-dark.svg dist/github-contribution-grid-snake-dark.svg
+          github_user_name: WindyDante
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       # Push the generated SVG files to the output branch
       - name: Push github-contribution-grid-snake.svg to the output branch
