@@ -1,5 +1,5 @@
 <div align="center">
-  <h2>This is My Github visit statistics</h2>
+  <h2>This is my Github visitor statistics, starting from October 14, 2024</h2>
 
   <!-- 访问者统计独占一行 -->
   <img src="https://count.kjchmc.cn/get/@WindyDante?theme=rule34" alt="Github Visit Statistics" style="margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/><br/><br/>
